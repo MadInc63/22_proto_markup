@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>kupimsami.ru</title>
+	<link rel="stylesheet" href="css/jquery.webui-popover.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+	<div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+			<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <span class="nav-link">Регион:</span>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#choose_region">Новосибирск и область
+      			<span>&#9660;</span>
+						</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Леонид Федорович</a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="#">Выход</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+		<div>
+			<i class="fa fa-home fa-5x fa-fw mt-2"></i>
+		</div>
+	</div>
+
+	
+	<footer class="container">
+		<div class="row justify-content-center">
+			<div class="col-10 text-center mt-4">
+          <p class="h2 text-left">Заявки</p>
+          <div class="row justify-content-between mt-4">
+						<div class="col form-group">	
+							<div class="row">
+								<div class="col-4 col-md-2">
+									<label for="selectSection"><small>раздел:</small></label>
+								</div>
+								<div class="col col-md-7">
+									<select class="form-control form-control-sm" id="selectSection">
+										<option selected>Все</option>
+										<option>Раздел 1</option>
+										<option>Раздел 2</option>
+										<option>Раздел 3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col form-group ">
+							<div class="row justify-content-end">
+								<div class="col-4 col-md-2">
+									<label for="selectRegionBid"><small>регион:</small></label>
+								</div>
+								<div class="col col-md-7">
+									<select class="form-control form-control-sm" id="selectRegionBid">
+										<option selected>Новосибирск и область</option>
+										<option value="1">Омск и область</option>
+										<option value="2">Томск и область</option>
+										<option value="3">Кемеровo и область</option>
+									</select>  
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="row justify-content-between">
+						<div class="col-2">
+							<span><small class="float-left gray">вчера 21:30</small></span>
+						</div>
+						<div class="col-2">
+							<a href="#" class="float-right gray">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<small><ins>закладки</ins></small>
+							</a>
+						</div>
+					</div>
+					<div class="row text-left mt-3">
+						<div class="col">
+							<span>60 шт. ПК от 72-15 до ПК 21-15, Криводановка, с доставкой.</span>
+						</div>
+					</div>
+					<div class="row text-left">
+						<div class="col">
+							<span>Алексей.</span>
+						</div>
+					</div>
+					<div class="form-row form-group mt-3">
+						<button class="btn btn-sm btn-secondary form-control col col-md-3" type="button" id="showHidenPhone1">Показать телефон</button>
+						<div id="hiddenPhone1" style="display:none;" class="col-3 col-form-label">+7 999 888-77</div>
+						<span class="col-form-label ml-3">12 просмотров</span>
+					</div>
+					<hr>
+					<div class="row justify-content-between">
+						<div class="col-2">
+							<span><small class="float-left gray">вчера 21:30</small></span>
+						</div>
+						<div class="col-2">
+							<a href="#" class="float-right gray">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<small><ins>закладки</ins></small>
+							</a>
+						</div>
+					</div>
+					<div class="row text-left mt-3">
+						<div class="col">
+							<span>60 шт. ПК от 72-15 до ПК 21-15, Криводановка, с доставкой.</span>
+						</div>
+					</div>
+					<div class="row text-left">
+						<div class="col">
+							<span>Алексей.</span>
+						</div>
+					</div>
+					<div class="form-row form-group mt-3">
+						<button class="btn btn-sm btn-secondary form-control col col-md-3" type="button" id="showHidenPhone2">Показать телефон</button>
+						<div id="hiddenPhone2" style="display:none;" class="col-3 col-form-label">+7 999 888-77</div>
+						<span class="col-form-label ml-3">12 просмотров</span>		
+					</div>
+					<hr>
+					<div class="row justify-content-between">
+						<div class="col-2">
+							<span><small class="float-left gray">вчера 21:30</small></span>
+						</div>
+						<div class="col-2">
+							<a href="#" class="float-right gray">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<small><ins>закладки</ins></small>
+							</a>
+						</div>
+					</div>
+					<div class="row text-left mt-3">
+						<div class="col">
+							<span>60 шт. ПК от 72-15 до ПК 21-15, Криводановка, с доставкой.</span>
+						</div>
+					</div>
+					<div class="row text-left">
+						<div class="col">
+							<span>Алексей.</span>
+						</div>
+					</div>
+					<div class="form-row form-group mt-3">
+						<button class="btn btn-sm btn-secondary form-control col col-md-3" type="button" id="showHidenPhone3">Показать телефон</button>
+						<div id="hiddenPhone3" style="display:none;" class="col-3 col-form-label">+7 999 888-77</div>
+						<span class="col-form-label ml-3">12 просмотров</span>		
+					</div>
+					<hr>
+					<div class="row justify-content-between">
+						<div class="col-2">
+							<span><small class="float-left gray">вчера 21:30</small></span>
+						</div>
+						<div class="col-2">
+							<a href="#" class="float-right gray">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<small><ins>закладки</ins></small>
+							</a>
+						</div>
+					</div>
+					<div class="row text-left mt-3">
+						<div class="col">
+							<span>60 шт. ПК от 72-15 до ПК 21-15, Криводановка, с доставкой.</span>
+						</div>
+					</div>
+					<div class="row text-left">
+						<div class="col">
+							<span>Алексей.</span>
+						</div>
+					</div>
+					<div class="form-row form-group mt-3">
+						<button class="btn btn-sm btn-secondary form-control col col-md-3" type="button" id="showHidenPhone4">Показать телефон</button>
+						<div id="hiddenPhone4" style="display:none;" class="col-3 col-form-label">+7 999 888-77</div>
+						<span class="col-form-label ml-3">12 просмотров</span>		
+					</div>
+					<hr>
+					<div>
+						<a href="bid.html">
+							<button class="btn btn-lg btn-secondary form-control col col-lg-4 col col-md-6 col-sm-7 mt-4" type="button">Показать еще</button>
+						</a>
+					</div>
+						<nav aria-label="Page navigation example" class="mt-4">
+							<ul class="pagination justify-content-center">
+								<li class="page-item">
+									<a class="page-link gray" href="#" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+										<span class="sr-only">Предыдущая</span>
+									</a>
+								</li>
+								<li class="page-item"><a class="page-link gray" href="#">1</a></li>
+								<li class="page-item"><a class="page-link gray" href="#">2</a></li>
+								<li class="page-item"><a class="page-link gray" href="#">3</a></li>
+								<li class="page-item">
+									<a class="page-link gray" href="#" aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+										<span class="sr-only">Следущая</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+				</div>
+		</div>
+	</footer>
+	
+	<footer class="container bg-light">
+		<div class="row justify-content-center mt-5">
+			<div class="col text-center mt-4">
+				<span class="h2 mt-3">
+					Вы поставщик ?
+				</span>
+			</div>
+		</div>
+		<div class="row mt-5 justify-content-center">
+			<div class="col-md-5">
+				<div>Для доступа к телефонам покупателей заполните форму или позвоните нам +7 999 888-77-66</div>
+				<br>
+				<div>Текс с дополнительной информацией по условиям сотрудничества.</div>
+				<div>Возможно стоит его вынести на отдельную страницу.</div>
+				<div>Текс с дополнительной информацией по условиям сотрудничества.</div>
+				<div>Возможно стоит его вынести на отдельную страницу.</div>
+			</div>
+			<div class="col-md-5 mt-3 mt-md-0">
+				<form id="sendSupplier" action="mailto:admin@this.shit" method="POST">
+					<div class="form-row form-group">
+						<div class="col col-form-label">
+							<div class="float-md-right">Организация</div>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<input type="text" class="form-control" name="organization" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<div class="col col-form-label">
+							<div class="float-md-right">Телефон</div>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<input type="text" class="form-control" name="phone" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<div class="col col-form-label">
+							<div class="float-md-right">Email</div>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<input type="text" class="form-control" name="email" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<div class="col col-form-label">
+							<div class="float-md-right">Имя</div>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<input type="text" class="form-control" name="name" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<div class="offset-lg-4 col col-lg-6">
+							<button class="btn btn-sm btn-secondary form-control" type="submit">Отправить информацию</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</footer>
+
+		<div class="modal fade" id="choose_region" tabindex="-1" role="dialog" aria-labelledby="choose_region_title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="choose_region_title">Выбор региона</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"> 
+          <p>Новосибирск и область</p>
+          <p>Омск и область</p>
+          <p>Томск и область</p>
+					<p>Кемерово и область</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-secondary">Выбрать регион</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+	<script src="js/jquery.min.js"></script>
+  <script src="js/jquery.webui-popover.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% block title %} {% endblock %}</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="../css/mystyle.css">
+	{% block popover_css %}
+  {% endblock %}
+</head>
+<body>
+	<!-- Navigation Bar -->
+	<div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+			<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <span class="nav-link">Регион:</span>
+          </li>
+          <li class="nav-item">
+ 						<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#choose_region" onclick="hidePopover()">Новосибирск и область
+      			<span id="geolocation" data-toggle="popover" data-content="<div class='container p-2 text-center'>
+                                                                         <p>Ваш регион - Новосибирск и область<br>Угадали?</p>
+                                                                         <a class='btn btn-secondary' href='#' onclick='hidePopover()'>Да</a>
+                                                                         <a class='btn btn-secondary' href='#' onclick='hidePopover()' data-toggle='modal' data-target='#choose_region'>Нет</a>
+                                                                       </div>">&#9660;</span>
+						</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Леонид Федорович</a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="#">Выход</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+	</div>
+	<!-- End of Navigation Bar -->
+
+	{% block main_content %}
+	{% endblock %}
+
+	<!-- Footer -->
+	<div class="container bg-light">
+		<div class="row justify-content-center mt-5">
+			<div class="col text-center mt-4">
+				<span class="h2 mt-3">
+					Вы поставщик ?
+				</span>
+			</div>
+		</div>
+		<div class="row mt-5 justify-content-center">
+			<div class="col-md-5">
+				<div>Для доступа к телефонам покупателей заполните форму или позвоните нам +7 999 888-77-66</div>
+				<br>
+				<div>Текс с дополнительной информацией по условиям сотрудничества.</div>
+				<div>Возможно стоит его вынести на отдельную страницу.</div>
+				<div>Текс с дополнительной информацией по условиям сотрудничества.</div>
+				<div>Возможно стоит его вынести на отдельную страницу.</div>
+			</div>
+			<div class="col-md-5 mt-3 mt-md-0">
+				<form id="sendSupplier" action="mailto:admin@this.shit" method="POST">
+					<div class="form-row form-group">
+						<div class="col col-form-label">
+							<div class="float-md-right">Организация</div>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<input type="text" class="form-control" name="organization" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<div class="col col-form-label">
+							<div class="float-md-right">Телефон</div>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<input type="text" class="form-control" name="phone" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<div class="col col-form-label">
+							<div class="float-md-right">Email</div>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<input type="text" class="form-control" name="email" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<div class="col col-form-label">
+							<div class="float-md-right">Имя</div>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<input type="text" class="form-control" name="name" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<div class="offset-lg-4 col col-lg-6">
+							<button class="btn btn-sm btn-secondary form-control" type="submit">Отправить информацию</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Enf of Footer -->
+
+	<!-- Modal Select Region -->
+	<div class="modal fade" id="choose_region" tabindex="-1" role="dialog" aria-labelledby="choose_region_title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="choose_region_title">Выбор региона</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Новосибирск и область</p>
+          <p>Омск и область</p>
+          <p>Томск и область</p>
+					<p>Кемерово и область</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-secondary">Выбрать регион</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!-- End of Modal Select Region -->
+
+	<!-- Modal Send Review -->
+	{% block modal_review %}
+	{% endblock %}
+	<!-- End of Modal Send Review -->
+
+	<!-- JavaScript -->
+	<script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+	{% block popover_js %}
+	{% endblock %}
+	<!-- End of JavaScript -->
+
+</body>
+</html>

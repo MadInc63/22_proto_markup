@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Заявки
+{% endblock %}
+
+{% block main_content %}
+	<div class="container">
+		<div>
+		  <i class="fa fa-home fa-5x fa-fw mt-2"></i>
+	  </div>
+		<div class="row justify-content-center">
+			<div class="col-10 text-center mt-4">
+        <p class="h2 text-left">Заявки</p>
+        <div class="row justify-content-between mt-4">
+					<div class="col form-group">
+						<div class="row">
+							<div class="col-4 col-md-2">
+								<label for="selectSection"><small>раздел:</small></label>
+							</div>
+							<div class="col col-md-7">
+								<select class="form-control form-control-sm" id="selectSection">
+									<option selected>Все</option>
+									<option>Раздел 1</option>
+									<option>Раздел 2</option>
+									<option>Раздел 3</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col form-group ">
+						<div class="row justify-content-end">
+							<div class="col-4 col-md-2">
+								<label for="selectRegionBid"><small>регион:</small></label>
+							</div>
+							<div class="col col-md-7">
+								<select class="form-control form-control-sm" id="selectRegionBid">
+									<option selected>Новосибирск и область</option>
+									<option value="1">Омск и область</option>
+									<option value="2">Томск и область</option>
+									<option value="3">Кемеровo и область</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+
+{% for number in range(10) %}
+				<div class="row justify-content-between">
+					<div class="col-2">
+						<span><small class="float-left gray">вчера 21:30</small></span>
+					</div>
+					<div class="col-2">
+						<a href="#" class="float-right gray">
+							<i class="fa fa-star" aria-hidden="true"></i>
+				  	  <small><ins>закладки</ins></small>
+						</a>
+					</div>
+				</div>
+				<div class="row text-left mt-3">
+					<div class="col">
+						<span>60 шт. ПК от 72-15 до ПК 21-15, Криводановка, с доставкой.</span>
+					</div>
+				</div>
+				<div class="row text-left">
+					<div class="col">
+						<span>Алексей.</span>
+					</div>
+				</div>
+				<div class="form-row form-group mt-3">
+					<button class="btn btn-sm btn-secondary form-control col col-md-3" type="button">Показать телефон</button>
+					<div style="display:none;" class="col-3 col-form-label">+7 999 888-77</div>
+					<span class="col-form-label ml-3">12 просмотров</span>
+				</div>
+				<hr>
+{% endfor %}
+
+				<div>
+					<form action="./bid.html">
+						<button class="btn btn-lg btn-secondary form-control col col-lg-4 col col-md-6 col-sm-7 mt-4" type="submit">Показать еще</button>
+          </form>
+				</div>
+				<nav aria-label="Page navigation example" class="mt-4">
+					<ul class="pagination justify-content-center">
+						<li class="page-item">
+							<a class="page-link gray" href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+								<span class="sr-only">Предыдущая</span>
+							</a>
+						</li>
+						<li class="page-item"><a class="page-link gray" href="#">1</a></li>
+						<li class="page-item"><a class="page-link gray" href="#">2</a></li>
+						<li class="page-item"><a class="page-link gray" href="#">3</a></li>
+						<li class="page-item">
+							<a class="page-link gray" href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+								<span class="sr-only">Следущая</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+{% endblock %}
