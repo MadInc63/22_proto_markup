@@ -15,7 +15,7 @@ It is necessary to prepare a rough layout of two pages:
  ```Bash
  python3 render_site.py
  ```
-The result of the script can be seen from the link 
+The result of the script can be seen from the link https://madinc63.github.io/22_proto_markup/site
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
